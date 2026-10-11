@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FaceLivenessCameraView">
+        <!-- Minimum score for a face to count as live. Default 0.915. -->
+        <attr name="livenessThreshold" format="float" />
+        <!-- Consecutive live frames before onVerified is called. Default 8. -->
+        <attr name="requiredLiveFrames" format="integer" />
+        <attr name="lensFacing" format="enum">
+            <enum name="front" value="0" />
+            <enum name="back" value="1" />
+        </attr>
+        <!-- Draw a green / red box around the face. Default true. -->
+        <attr name="showFaceOverlay" format="boolean" />
+        <!-- Start the camera automatically when shown. Default true. -->
+        <attr name="autoStart" format="boolean" />
+    </declare-styleable>
+</resources>

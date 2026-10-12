@@ -2,7 +2,7 @@
 
 [![](https://jitpack.io/v/vishalsgithub/face-liveness-android.svg)](https://jitpack.io/#vishalsgithub/face-liveness-android)
 
-On-device **face liveness (anti-spoofing) detection** for Android. It checks whether the face in front of the camera is real or a presentation attack (printed photo, screen replay, mask) from ordinary camera frames. The user doesn't have to blink or turn their head, and nothing leaves the device.
+On-device **face liveness (anti-spoofing) detection** for Android, based on [Silent-Face-Anti-Spoofing](https://github.com/minivision-ai/Silent-Face-Anti-Spoofing) by MiniVision (see [Credits](#credits)). It checks whether the face in front of the camera is real or a presentation attack (printed photo, screen replay, mask) from ordinary camera frames. The user doesn't have to blink or turn their head, and nothing leaves the device.
 
 - `FaceLivenessCameraView`: a ready-made CameraX view with a live verdict, usable from XML or code
 - `FaceLiveness.detect()`: checks photos (`Bitmap` or `Uri`)
@@ -124,6 +124,16 @@ Building the library from source downloads the prebuilt ncnn engine (about 21 MB
 - Flutter: [face_liveness](https://pub.dev/packages/face_liveness)
 - React Native: [@solankivishal/react-native-face-liveness](https://www.npmjs.com/package/@solankivishal/react-native-face-liveness)
 
+## Credits
+
+The liveness algorithm, the trained models and the original Android deployment code that this library is built on are the work of **[MiniVision (小视科技)](https://www.minivision.cn/)**:
+
+- **[minivision-ai/Silent-Face-Anti-Spoofing](https://github.com/minivision-ai/Silent-Face-Anti-Spoofing)**, Silent Face Anti-Spoofing (MiniFASNet), Apache-2.0
+
+All credit for the anti-spoofing research and models goes to them. This library repackages their work as an Android library.
+
+Inference is powered by **[Tencent/ncnn](https://github.com/Tencent/ncnn)** (BSD-3-Clause).
+
 ## License
 
-Apache-2.0. See [LICENSE](LICENSE). ncnn is distributed under BSD-3-Clause.
+Apache-2.0, the same license as the original [Silent-Face-Anti-Spoofing](https://github.com/minivision-ai/Silent-Face-Anti-Spoofing) project. ncnn is distributed under BSD-3-Clause.
